@@ -1,0 +1,32 @@
+{
+  "atom": {
+    "rewriteTsconfig": true
+  },
+  "compileOnSave": false,
+  "buildOnSave": false,
+  "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "experimentalDecorators": true,
+    "jsx": "react"
+  },
+  "filesGlob": [
+    "client/**/*.tsx",
+    "client/**/*.ts",
+    "server/**/*.ts",
+    "typings/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ],
+  "files": [
+    "client/Contact/Contact.tsx",
+    "client/ContactList/ContactList.tsx",
+    "client/main.tsx",
+    "typings/globals/meteor/index.d.ts",
+    "typings/globals/react-dom/index.d.ts",
+    "typings/globals/react/index.d.ts",
+    "typings/index.d.ts"
+  ]
+}

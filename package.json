@@ -1,0 +1,21 @@
+{
+  "name": "default-meteor",
+  "private": true,
+  "scripts": {
+    "start": "meteor run",
+    "test": "meteor test --driver-package=practicalmeteor:mocha"
+  },
+  "dependencies": {
+    "meteor-node-stubs": "^0.2.3",
+    "react": "^15.3.0",
+    "react-addons-test-utils": "^15.3.0",
+    "react-dom": "^15.3.0"
+  },
+  "devDependencies": {
+    "chai": "3.x",
+    "chai-enzyme": "^0.5.0",
+    "cheerio": "0.19.x || 0.20.x",
+    "enzyme": "^2.4.1",
+    "faker": "^3.1.0"
+  }
+}
