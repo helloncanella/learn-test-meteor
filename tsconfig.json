@@ -17,12 +17,9 @@
     "server/**/*.ts",
     "typings/**/*.ts"
   ],
-  "exclude": [
-    "node_modules"
-  ],
   "files": [
     "client/Contact/Contact.tsx",
-    "client/ContactList/ContactList.tsx",
+    "client/ContactListContainer/ContactListContainer.tsx",
     "client/main.tsx",
     "typings/globals/meteor/index.d.ts",
     "typings/globals/react-dom/index.d.ts",
