@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-export interface ContactProps {name:string, email: string};
+export interface ContactProps {name:string, email: string, key: string};
 
 export class Contact extends React.Component<ContactProps, any>{    
     render(){

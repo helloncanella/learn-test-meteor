@@ -22,3 +22,4 @@ meteortypescript:compiler
 practicalmeteor:mocha
 dburles:factory
 react-meteor-data
+hwillson:stub-collections

@@ -19,6 +19,7 @@
   ],
   "files": [
     "client/Contact/Contact.tsx",
+    "client/ContactForm/ContactForm.tsx",
     "client/ContactListContainer/ContactListContainer.tsx",
     "client/main.tsx",
     "typings/globals/meteor/index.d.ts",

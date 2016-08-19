@@ -1,9 +1,11 @@
 import { chai } from 'meteor/practicalmeteor:chai';
 import React from 'react';
-import { shallow } from 'enzyme';
+import { shallow, mount } from 'enzyme';
 import  ContactListContainer  from './ContactListContainer.tsx';
 import { Contact } from '../Contact/Contact.tsx';
-import  faker  from 'faker'; 
+import  faker  from 'faker';
+import StubCollections from 'meteor/hwillson:stub-collections';
+import  Contacts  from '../../imports/api/contacts.ts'; 
 
 var expect = chai.expect;
 
@@ -13,14 +15,17 @@ describe('<ContactListContainer />', function(){
 
     beforeEach(()=>{
 
-        //creating a local collection
-        ContactListCollection = new Meteor.Collection(null);
+        StubCollections.stub(Contacts);
 
-        Factory.define('contactListItem', ContactListCollection, {
+        Factory.define('contactListItem', Contacts, {
             name: () => faker.name.findName(),
             email: () => faker.internet.email()
         });
     
+    })
+
+    afterEach(()=>{
+        StubCollections.restore();
     })
 
     it('renders contact list from database', function(){
@@ -31,9 +36,10 @@ describe('<ContactListContainer />', function(){
             var item = Factory.create('contactListItem');
         }
 
-        const contactListContainer = shallow(<ContactListContainer />);       
+        const contactListContainer = mount(<ContactListContainer />); 
 
         expect(contactListContainer.find(Contact)).to.have.length(randomInt);
+        
     })
 
 });

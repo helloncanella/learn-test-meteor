@@ -14,7 +14,7 @@ describe('<Contact />', ()=>{
         let email = "helloncanella@gmail.com";
 
         const contact = shallow(<Contact name={name} email={email}/>);
-
+        
         var renderedName =  contact.find('.name').text();
         var renderedEmail = contact.find('.email').text();
 
