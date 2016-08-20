@@ -5,7 +5,7 @@ import  ContactListContainer  from './ContactListContainer.tsx';
 import { Contact } from '../Contact/Contact.tsx';
 import  faker  from 'faker';
 import StubCollections from 'meteor/hwillson:stub-collections';
-import  Contacts  from '../../imports/api/contacts.ts'; 
+import  { Contacts }  from '../../imports/api/saveData.ts'; 
 
 var expect = chai.expect;
 

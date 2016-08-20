@@ -14,10 +14,13 @@
   "filesGlob": [
     "client/**/*.tsx",
     "client/**/*.ts",
-    "server/**/*.ts",
-    "typings/**/*.ts"
+    "typings/**/*.ts",
+    "imports/**/*.ts",
+    "server/**/*.ts"
   ],
   "files": [
+    "server/main.ts",
+    "imports/api/saveData.ts",
     "client/Contact/Contact.tsx",
     "client/ContactForm/ContactForm.tsx",
     "client/ContactListContainer/ContactListContainer.tsx",

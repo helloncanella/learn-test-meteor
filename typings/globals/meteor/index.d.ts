@@ -19,6 +19,18 @@ declare module "meteor/react-meteor-data" {
   export var createContainer:any;
 }
 
+declare module "meteor/mdg:validated-method"{
+  export var ValidatedMethod; 
+}
+
+declare module "meteor/aldeed:simple-schema" {
+  export var SimpleSchema;	
+}
+
+declare module "meteor/xolvio:cleaner" {
+  export var resetDatabase;
+}
+
 declare module "meteor/match" {
   export module Match {
     export var Any: any;
@@ -935,3 +947,4 @@ declare function execFileSync(command: string, args?: any[], options?: {
   waitForClose?: string;
 }): String;
 declare function getExtension(): String;
+
