@@ -29,16 +29,21 @@ export class ContactForm extends React.Component<{}, ContactFormState >{
         var name = this.state.name;
  
         saveData.call({name: name, email: email})
+
+        this._cleanFields();
+    }
+
+    _cleanFields(){
+        this.setState({name:'', email:''});
     }    
     
-
     render(){
         return (
 
             //.bind(this) is being attached in order the tests work properly 
             <form onSubmit={this._handleSubmit.bind(this)}>
-                <input id="name" type="text" name="name" placeholder="email" onChange={this._handleNameChange.bind(this)}/>
-                <input id="email" type="email" name="email" placeholder="name" onChange={this._handleEmailChange.bind(this)}/>
+                <input id="name" type="text" value={this.state.name} name="name" placeholder="email" onChange={this._handleNameChange.bind(this)}/>
+                <input id="email" type="email" value={this.state.email} name="email" placeholder="name" onChange={this._handleEmailChange.bind(this)}/>
                 <input id="submit" type="submit" value="send"/>
             </form>
         );
