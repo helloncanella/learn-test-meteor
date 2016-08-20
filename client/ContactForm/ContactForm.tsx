@@ -1,8 +1,12 @@
 import * as React from 'react';
 import { createContainer } from 'meteor/react-meteor-data';
 import { Meteor } from 'meteor/meteor';
+import { saveData } from '../../imports/methods/saveData';
 
-export class ContactForm extends React.Component<{},{}>{
+
+export interface ContactFormState{name?: string, email?: string}
+
+export class ContactForm extends React.Component<{}, ContactFormState >{
 
 
     constructor(){
@@ -11,7 +15,7 @@ export class ContactForm extends React.Component<{},{}>{
     }
 
     _handleEmailChange(e){                
-        this.setState({email:e.target.value})
+        this.setState({email: e.target.value})
     }
 
     _handleNameChange(e){
@@ -20,6 +24,11 @@ export class ContactForm extends React.Component<{},{}>{
     
     _handleSubmit(e){
         e.preventDefault();
+
+        var email = this.state.email;
+        var name = this.state.name;
+ 
+        saveData.call({name: name, email: email})
     }    
     
 

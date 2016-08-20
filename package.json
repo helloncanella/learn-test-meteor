@@ -10,13 +10,14 @@
     "react": "^15.3.0",
     "react-addons-test-utils": "^15.3.0",
     "react-dom": "^15.3.0",
-    "react-addons-pure-render-mixin":"15.x"
+    "react-addons-pure-render-mixin": "15.x"
   },
   "devDependencies": {
     "chai": "3.x",
     "chai-enzyme": "^0.5.0",
     "cheerio": "0.19.x || 0.20.x",
     "enzyme": "^2.4.1",
-    "faker": "^3.1.0"
+    "faker": "^3.1.0",
+    "sinon": "^1.17.5"
   }
 }
