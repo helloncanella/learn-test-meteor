@@ -1,3 +1,2 @@
-#Meteor test
-
-Learning how to test with meteor
+#Meteor React Boilerplate   
+Boilerplate for react-meteor integration
